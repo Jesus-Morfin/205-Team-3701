@@ -4,8 +4,9 @@ import time
 import pyttsx3
 import pywhatkit
 import datetime
-#Source: https://www.youtube.com/watch?v=8IV7PFFBVZU
+#Search Bar Source: https://www.youtube.com/watch?v=8IV7PFFBVZU
 #Add delay: https://www.geeksforgeeks.org/how-to-add-time-delay-in-python/
+#Voice Recognition source:https://www.youtube.com/watch?v=AWvsXxDtEkU 
 
 
 print("Hello Welcome to Bob where we are able to search up video using Speech Recognition or Search Bar")
