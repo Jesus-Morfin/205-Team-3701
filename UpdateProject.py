@@ -34,7 +34,8 @@ userInput = int(input())
 
 
 #If the user enters 1 it will send them to the speech recognition
-if userInput == 1:  
+if userInput == 1: 
+    #system listening
     listener = sr.Recognizer()
     engine = pyttsx3.init()
     def talk(text):
@@ -42,6 +43,7 @@ if userInput == 1:
         engine.runAndWait()
     def take_command():
         try:
+            #microphone recognition
             with sr.Microphone() as source:
                 print("Listening...")
                 voice = listener.listen(source)
@@ -54,6 +56,7 @@ if userInput == 1:
             pass
         return command
     def run_bob():
+        #bob runs the command
         command = take_command()
         print(command)
         if 'play' in command:
