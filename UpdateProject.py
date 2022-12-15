@@ -21,8 +21,8 @@ if userInput == 1:
     #Ricardo Check the code below
     listener = sr.Recognizer()
     engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
+    # voices = engine.getProperty('voices')
+    # engine.setProperty('voice', voices[1].id)
     def talk(text):
         engine.say(text)
         engine.runAndWait()
