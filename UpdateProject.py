@@ -1,5 +1,5 @@
 import pywhatkit as pwt
-import speech_recognition as sr
+import speech_recognition as va
 import time
 import pyttsx3
 import pywhatkit
@@ -18,18 +18,18 @@ time.sleep(2.0)
 userInput = int(input())
 
 if userInput == 1:
-    #Ricardo Check the code below
-    listener = sr.Recognizer()
+    listener = va.Recognizer()
     engine = pyttsx3.init()
     # voices = engine.getProperty('voices')
     # engine.setProperty('voice', voices[1].id)
-    def talk(text):
-        engine.say(text)
-        engine.runAndWait()
+    def bob_talk(myMessage):
+        myEngine.say(text)
+        myEngine.runAndWait()
     def take_command():
         try:
-            with sr.Microphone() as source:
-                print("Listening...")
+            with va.Microphone() as source:
+                print('Say song title and artist')
+                print("Listening for voice...")
                 voice = listener.listen(source)
                 command = listener.recognize_google(voice)
                 command = command.lower()
@@ -43,12 +43,9 @@ if userInput == 1:
         command = take_command()
         print(command)
         if 'play' in command:
-            song = command.replace('play', '')
-            talk('playing' + song)
-            pywhatkit.playonyt(song)
-        elif 'time' in command:
-            time = datetime.datetime.now().strftime('%I:%M %p')
-            talk('Current time is' + time)
+            mySong = command.replace('play', '')
+            bob_talk('playing' + mySong)
+            pywhatkit.playonyt(mySong)
     run_bob()
 
 elif userInput == 2:
