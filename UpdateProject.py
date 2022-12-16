@@ -33,19 +33,20 @@ time.sleep(2.0)
 userInput = int(input())
 
 if userInput == 1:
-    #Ricardo Check the code below
     listener = va.Recognizer()
     engine = pyttsx3.init()
     # voices = engine.getProperty('voices')
     # engine.setProperty('voice', voices[1].id)
+#Line 41 is to make bob say our message back to us on what we told it to do
     def bob_talk(myMessage):
         engine.say(myMessage)
         engine.runAndWait()
+#Line 45 is a function that was created in order for bob to take our command
     def take_command():
         try:
             with va.Microphone() as source:
                 print('Say song title and artist')
-                print("Listening...")
+                print("Listening for voice...")
                 voice = listener.listen(source)
                 command = listener.recognize_google(voice)
                 command = command.lower()
@@ -55,6 +56,7 @@ if userInput == 1:
         except:
             pass
         return command
+#Line 60 is another function created in order to use the take_command function and make bob play our video
     def run_bob():
         #bob runs the command
         command = take_command()
@@ -63,6 +65,7 @@ if userInput == 1:
             mySong = command.replace('play', '')
             bob_talk('playing' + mySong)
             pywhatkit.playonyt(mySong)
+#Line 69 runs bob
     run_bob()
 
 #If the user enters 2 it will take them to the search bar
