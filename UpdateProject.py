@@ -34,16 +34,17 @@ userInput = int(input())
 
 if userInput == 1:
     #Ricardo Check the code below
-    listener = sr.Recognizer()
+    listener = va.Recognizer()
     engine = pyttsx3.init()
     # voices = engine.getProperty('voices')
     # engine.setProperty('voice', voices[1].id)
-    def talk(text):
-        engine.say(text)
+    def bob_talk(myMessage):
+        engine.say(myMessage)
         engine.runAndWait()
     def take_command():
         try:
-            with sr.Microphone() as source:
+            with va.Microphone() as source:
+                print('Say song title and artist')
                 print("Listening...")
                 voice = listener.listen(source)
                 command = listener.recognize_google(voice)
