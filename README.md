@@ -1,5 +1,5 @@
 # 205-Team-3701
-Project title:Bob Voice Recognition/Search bar for Youtube
+Project title: Bob Voice Recognition/Search bar for Youtube
 
 Team members Javier Dominguez, Ricardo Nunez Lopez, Jesus Morfin
 
@@ -7,11 +7,13 @@ Class: CST-205
 
 Date: December 13, 2022
 
-Have a song title and artisit in mind
+First the user should think of a song title and artisit in mind
 
-Must Require a Microphone to run the program
+Also they must require a Microphone to run the program for option 1
 
-Choose between an option to use the speech recoginiton or search bar
+Next the user gets to choose between an option to use the speech recoginiton as option 1 or the search bar as option 2
+
+If you are trying to find a video that you want to appear, you have to be specific otherwise it may give what you are looking for but not that video
 
 Link to GitHub Repository: https://github.com/Jesus-Morfin/205-Team-3701
 
