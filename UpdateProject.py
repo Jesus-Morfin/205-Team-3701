@@ -33,17 +33,18 @@ time.sleep(2.0)
 userInput = int(input())
 
 if userInput == 1:
-    listener = va.Recognizer()
-    myEngine = pyttsx3.init()
+    #Ricardo Check the code below
+    listener = sr.Recognizer()
+    engine = pyttsx3.init()
     # voices = engine.getProperty('voices')
     # engine.setProperty('voice', voices[1].id)
-    def bob_talk(text):
-        myEngine.say(text)
-        myEngine.runAndWait()
+    def talk(text):
+        engine.say(text)
+        engine.runAndWait()
     def take_command():
         try:
-            with va.Microphone() as source:
-                print("Listening to voice...")
+            with sr.Microphone() as source:
+                print("Listening...")
                 voice = listener.listen(source)
                 command = listener.recognize_google(voice)
                 command = command.lower()
